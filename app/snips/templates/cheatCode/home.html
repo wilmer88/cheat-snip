@@ -1,0 +1,14 @@
+{% extends 'cheatCode/layout.html' %}
+{% block title %} welcome to home the home page {% endblock %}
+{% block content %}
+<h1>whats next: {{header}} and later</h1>
+{% for things in things_to_do %}
+    <ol >
+       
+
+        <li class="centrar">{{things}}</li>
+
+        
+    </ol>
+    {% endfor %}
+{% endblock %}

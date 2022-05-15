@@ -2,9 +2,10 @@ from django.shortcuts import render
 from django.http import HttpResponse
 # Create your views here.
 def home(request):
-        response = "<h1> django is working</h1>"
-        return HttpResponse(response)
+      
+        return render(request, "cheatCode/home.html", {"header": "with c#",
+        "things_to_do": ["learn c", "learn python", "find work"]})
         
 def fight_stage(request):
-        response = """<h1> fight stage will be on this page</h1>"""
-        return HttpResponse(response)
+        
+        return render(request, 'cheatCode/fight_stage.html', {})
