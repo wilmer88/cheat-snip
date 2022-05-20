@@ -3,8 +3,8 @@ from django.http import HttpResponse
 # Create your views here.
 def home(request):
       
-        return render(request, "cheatCode/home.html", {"header": "with c#",
-        "things_to_do": ["learn c", "learn python", "find work"]})
+        return render(request, "cheatCode/home.html", {"header": 'with c# ',
+        "things_to_do": ["learn c", 'learn python', 'find work']})
         
 def fight_stage(request):
         
