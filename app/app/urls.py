@@ -15,6 +15,10 @@ Including another URLconf
 """
 from django.urls import re_path, include
 from django.contrib import admin
+# urls.py
+from django.urls import path
+
+
 
 
 urlpatterns = [
