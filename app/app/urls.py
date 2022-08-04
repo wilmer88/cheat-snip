@@ -18,9 +18,6 @@ from django.contrib import admin
 # urls.py
 from django.urls import path
 
-
-
-
 urlpatterns = [
     re_path(r'^admin/', admin.site.urls),
     re_path(r'', include('snips.urls')),
