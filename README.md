@@ -2,7 +2,7 @@
 ## installation
 -to run python program enter inside app directory `python manage.py runserver`
 -to create new virtualenv go to folder where you want to create the envirment and run `python -m virtualenv YOURenvNAME`
--next in the same dir run `source YOURenvNAME/Scripts/activate` or if in command prompt try `.\yourEnvName\Scripts\activate` to actually _use_ your sandbox, and "source" the virtualenv.
+* next in the same dir run `source YOURenvNAME/Scripts/activate` or if in command prompt try `.\yourEnvName\Scripts\activate` to actually _use_ your sandbox, and "source" the virtualenv.
 -To exit your virtualenv sandbox and return to your normal system environmentuse `deactivate`
 -To install django run in the same dir you created virtualenv run `python -m pip install Django`
 -to start project run `django-admin startproject app` that will create your django app folder
@@ -33,10 +33,10 @@ also very crucial to have exact naming for the app to work.
 - next, inside app/urls.py import dependencies and add paths from users.urls
 `from django.urls import re_path, include`  
 inside urlpatterns[] add ` path(r'', include('users.urls')) ` like this
-   urlpatterns = [
+  ` urlpatterns = [
     re_path(r'^admin/', admin.site.urls),
     re_path(r'', include('snips.urls')),
-]
+]`
 
 
 
@@ -56,11 +56,11 @@ this will be like {{{ body }}} of main.handlebars file when using handlebars.js
 </body> `
 
 -create another html file called index.html file and inside this file type
- `{% extends 'users/layout.html %} 
- {% block title %} Welcome to Index {% endblock %} 
-  {% block content %}
-   <h1>congrats with django if reading this</h1>
-  {% endblock %}`
+ `{% extends 'users/layout.html %} `
+ `{% block title %} Welcome to Index {% endblock %} `
+ ` {% block content %}   `
+  ` <h1>congrats with django if reading this</h1>`
+  `{% endblock %}`
 
 # python-notes
 -using django is like having and using express and handlebars together. 
