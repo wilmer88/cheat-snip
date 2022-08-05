@@ -1,17 +1,16 @@
 <div class="row">
   <div class="col-sm-12">
     <div class="container mt-5">
-        {% extends 'users/layout.html' %} {% block content %} {% if header %}
-        <h1 class="chango">welcome to index. Whats next: {{header}} and later</h1>
-        {% else %}
-        <h1 >
-          <span class="badge bg-secondary mt-3">
-            {% block title %} javascript snips {% endblock %}
-          </span>
-        </h1>
-        {% endif %}
+      {% extends 'users/layout.html' %} {% block content %} {% if header %}
+      <h1 class="chango">welcome to index. Whats next: {{header}} and later</h1>
+      {% else %}
+      <h1>
+        <span class="badge bg-secondary mt-3">
+          {% block title %} javascript snips {% endblock %}
+        </span>
+      </h1>
+      {% endif %}
     </div>
-
 
     <div class="container">
       <div class="bg-light p-3 rounded-lg m-12">

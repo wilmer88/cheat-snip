@@ -42,7 +42,7 @@ inside urlpatterns[] add ` path(r'', include('users.urls')) ` like this
 
 -to run python program enter inside app directory in bash or command prompt `python manage.py runserver`
 -your app should be running on `localhost:8080/home`
-- Create templates to sparate your html/pages from your "controller"/users/views.py and makeyour views dynamic inside of the users folder create a new folder that must called `templates` for django to find. 
+-Create templates to sparate your html/pages from your "controller"/users/views.py and makeyour views dynamic inside of the users folder create a new folder that must called `templates` for django to find. 
 -inside of templates creat new folder and name it `users` or what ever you want not sure of the consequences.
 -inside of users/templates/users create layout.html file
 -inside of layout.html file inside the head tags delete what is inside the title tags and insert like example
@@ -50,22 +50,17 @@ inside urlpatterns[] add ` path(r'', include('users.urls')) ` like this
 
 -inside of layout.html file inside the body tags delete what is inside the body tags and insert like example
 this will be like {{{ body }}} of main.handlebars file when using handlebars.js
-<body>
+`<body>
 {% block content %}
 {% endblock %}
-</body> 
+</body> `
 
 -create another html file called index.html file and inside this file type
- {% extends 'users/layout.html %} 
+ `{% extends 'users/layout.html %} 
  {% block title %} Welcome to Index {% endblock %} 
   {% block content %}
    <h1>congrats with django if reading this</h1>
-  {% endblock %}
-
-
-
--
-
+  {% endblock %}`
 
 # python-notes
 -using django is like having and using express and handlebars together. 
