@@ -15,10 +15,10 @@
         
             <ul class="nav nav-tabs">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Active</a>
+                  <a class="nav-link {% if navbar == 'index' %} active {% endif %}" aria-current="page" href="{% url 'index' %}">All Snips</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
+                  <a class="nav-link {% if navbar == 'add_snip' %} active {% endif %}"  href="{% url 'add_snip' %}">Add Snip</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">Link</a>
@@ -26,6 +26,7 @@
                 <li class="nav-item">
                   <a class="nav-link disabled">Disabled</a>
                 </li>
+                
               </ul>
          {% block content %} 
          {% endblock %}

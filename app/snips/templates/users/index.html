@@ -1,30 +1,31 @@
+{% extends 'users/layout.html' %} {% block content %} 
 <div class="row">
   <div class="col-sm-12">
     <div class="container mt-5">
-      {% extends 'users/layout.html' %} {% block content %} {% if header %}
-      <h1 class="chango">welcome to index. Whats next: {{header}} and later</h1>
+ 
+       {% if language %}
+      <h1 class="chango">javascript snips</h1>
       {% else %}
       <h1>
         <span class="badge bg-secondary mt-3">
-          {% block title %} javascript snips {% endblock %}
+          {% block title %} fail to get snips{% endblock %}
         </span>
       </h1>
       {% endif %}
-    </div>
+    </div> 
 
     <div class="container">
       <div class="bg-light p-3 rounded-lg m-12">
         <ul>
-          {% for things in things_to_do %}
+          {% for ssnips in language %}
 
           <li class="centrar">
             <div class="card">
-              <div class="card-header text-center">{{things}}</div>
+              <div class="card-header text-center">{{ssnips.language_name}}</div>
               <div class="card-body">
-                <h5 class="card-title">fizz buzz</h5>
+                <h5 class="card-title">{{ssnips.snip_title}}</h5>
                 <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+            {{ ssnips.short_description}}
                 </p>
               </div>
 
@@ -34,22 +35,8 @@
                   id="exampleFormControlTextarea1"
                   rows="16"
                 >
- 
-                                        var fizzBuzz = function(arr) {
-                                          for (var i = 0; i < arr.length; i++) {
-                                            var currentNumber = arr[i];
-                                        
-                                            if (currentNumber % 15 === 0) {
-                                              console.log("Fizz Buzz");
-                                            } else if (currentNumber % 3 === 0) {
-                                              console.log("Fizz");
-                                            } else if (currentNumber % 5 === 0) {
-                                              console.log("Buzz");
-                                            } else {
-                                              console.log(currentNumber);
-                                            }
-                                          }
-                                        };</textarea
+                    {{ssnips.language_code}}
+                </textarea
                 >
               </div>
               <div class="card-footer">8/5/22</div>
