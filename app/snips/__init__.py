@@ -1,3 +1,7 @@
+# from snips.models import Snipit
+
+
+# Snipit.objects.all()
 # students = []
 
 # while True: 
