@@ -21,7 +21,7 @@
                   <a class="nav-link {% if navbar == 'add_snip' %} active {% endif %}"  href="{% url 'add_snip' %}">Add Snip</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
+                  <a class="nav-link {% if navbar == 'edit' %} active {% endif %}" href="{% url 'edit' %}">edit</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link disabled">Disabled</a>

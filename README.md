@@ -1,5 +1,5 @@
 # cheat-snip
-## installation
+* to activate existing enviorment `.\env\Scripts\activate `
 * to run python program enter inside app directory `python manage.py runserver`
 * to create new virtualenv go to folder where you want to create the envirment and run `python -m virtualenv YOURenvNAME`
 * next in the same dir run `source YOURenvNAME/Scripts/activate` or if in command prompt try `.\yourEnvName\Scripts\activate` to actually _use_ your sandbox, and "source" the virtualenv.

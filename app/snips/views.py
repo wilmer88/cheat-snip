@@ -17,6 +17,10 @@ def add_snip(request):
         return render(request, "users/add_snip.html", {
                 "navbar":"add_snip"
                 })
+def edit(request):
+        return render(request, "users/edit.html", {
+                "navbar":"edit"
+                })                
         
         
 # "header": 'with c# ',
