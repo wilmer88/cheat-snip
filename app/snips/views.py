@@ -1,3 +1,4 @@
+from urllib import response
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Snipit
@@ -17,10 +18,13 @@ def add_snip(request):
         return render(request, "users/add_snip.html", {
                 "navbar":"add_snip"
                 })
-def edit(request):
-        return render(request, "users/edit.html", {
-                "navbar":"edit"
-                })                
+
+
+def edit(request,snip_id):
+        Selected_snip = Snipit.objects.get(id=snip_id)
+        return render( request, "users/edit.html",{"navbar":"edit","viw_snip":Selected_snip}
+                
+                )             
         
         
 # "header": 'with c# ',

@@ -8,21 +8,40 @@
         
          
 
-        
-          <div class="card">
+
+          <div class="card mb-3">
             <div class="card-body">
-                <form class="row g-3">
+                <form class="row g-3" action="/your-name/" method="post">
                 <div class="col-12">
                     <label for="inputAddress" class="form-label">Computer language</label>
-                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                    <input type="text" value="" class="form-control" id="inputAddress" placeholder="your lan">
                   </div>
                   <div class="col-12 mt-3">
-                    <label for="inputAddress2" class="form-label">Title</label>
-                    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                    <label for="inputAddress2" class="form-label">Snip Title</label>
+                    <input type="text" value="" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                  </div>
+                  <div class="card-body">
+                    <textarea
+                      class="form-control"
+                      id="exampleFormControlTextarea1"
+                      rows="16"
+                    >
+                    
+                    </textarea
+                    >
+                  </div>
+
+                  <div class="col-12">
+                    <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                   </div>
         
-                  <div class="col-12 mt-3">
-                    <button type="submit" class="btn btn-primary">Sign in</button>
+                  <div class="col-6 mt-3">
+                    <button type="submit" class="btn btn-primary">Save Snip</button>
+                   
+                  </div>
+                  <div class="col-6 mt-3">
+             
                   </div>
                 </form>
               
@@ -41,3 +60,4 @@
   
 
 {% endblock %}
+  

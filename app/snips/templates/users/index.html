@@ -15,8 +15,7 @@
     </div> 
 
     <div class="container">
-      <div class="bg-light p-3 rounded-lg m-12">
-        <ul>
+      <div class="bg-light p-3 rounded-lg m-12"><ul class="list-unstyled">
           {% for ssnips in language %}
 
           <li class="centrar">
@@ -39,7 +38,7 @@
                 </textarea
                 >
               </div>
-              <div class="card-footer"><a href="/edit">Edit</a></div>
+              <div class="card-footer"><a href="edit/{{ssnips.id}}">Edit</a></div>
             </div>
 
             <hr class="my-4" />
