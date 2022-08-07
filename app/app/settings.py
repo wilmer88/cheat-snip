@@ -23,9 +23,9 @@ APPEND_SLASH=False
 SECRET_KEY = 'django-insecure-(^0@v_df6#q!(s6%in@2d&dz!$#v-56u55_pr1sy5m5_d)yk1v'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["https://ratachanga-code.herokuapp.com","127.0.0.1","localhost"]
 
 
 # Application definition
