@@ -1,23 +1,11 @@
 {% extends 'users/layout.html' %} {% block content %} 
+{% csrf_token %}
 <div class="row">
   <div class="col-sm-12">
-    <div class="container mt-5">
- 
-       {% if language %}
-      <h1 class="chango">javascript snips</h1>
-      {% else %}
-      <h1>
-        <span class="badge bg-secondary mt-3">
-          {% block title %} fail to get snips{% endblock %}
-        </span>
-      </h1>
-      {% endif %}
-    </div> 
 
     <div class="container">
       <div class="bg-light p-3 rounded-lg m-12"><ul class="list-unstyled">
           {% for ssnips in language %}
-
           <li class="centrar">
             <div class="card">
               <div class="card-header text-center">{{ssnips.language_name}}</div>
@@ -49,6 +37,8 @@
       </div>
     </div>
 
-    {% endblock %}
+    
   </div>
 </div>
+
+{% endblock %}

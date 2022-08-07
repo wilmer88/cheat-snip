@@ -8,23 +8,26 @@
         
          
 
-        {% if viw_snip %}
+
           <div class="card mb-3">
             <div class="card-body">
-                <form class="row g-3">
+              {% csrf_token %}
+                <form class="row g-3" action=""  method="PUT">
                 <div class="col-12">
                     <label for="inputAddress" class="form-label">Computer language</label>
-                    <input type="text" value="{{viw_snip.language_name}}" class="form-control" id="inputAddress" placeholder="your lan">
+                    <input type="text" name="language_name" value="{{viw_snip.language_name}}" class="form-control" id="inputAddress" placeholder="your lan" required>
                   </div>
                   <div class="col-12 mt-3">
                     <label for="inputAddress2" class="form-label">Snip Title</label>
-                    <input type="text" value="{{viw_snip.snip_title}}" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                    <input type="text" name="snip_title" value="{{viw_snip.snip_title}}" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" required>
                   </div>
                   <div class="card-body">
                     <textarea
                       class="form-control"
                       id="exampleFormControlTextarea1"
                       rows="16"
+                      name="language_code"
+                      required
                     >
                         {{viw_snip.language_code}}
                     </textarea
@@ -33,7 +36,7 @@
 
                   <div class="col-12">
                     <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">{{viw_snip.short_description}}</textarea>
+                  <textarea name="short_description" class="form-control" id="exampleFormControlTextarea1" rows="3" required>{{viw_snip.short_description}}</textarea>
                   </div>
         
                   <div class="col-6 mt-3">
@@ -49,10 +52,6 @@
           </div>
    
     </div> 
-    {% else %}
-   fail to get snips
-    {% endif %}
-
   </div>
 </div>
 <div class="col-sm-3">
