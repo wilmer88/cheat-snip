@@ -13,14 +13,17 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from importlib.resources import path
 from django.urls import re_path, include
 from django.contrib import admin
+# from . import views
 
 urlpatterns = [
     re_path(r'^admin/', admin.site.urls),
     re_path(r'', include('snips.urls')),
+    # path("edit/<int:id>",views.edit)
 ]
-# from . import views
+
 # from django.urls import re_path
 # #the $ sign besides home restrict the path from having home plus characters and still hit the home path
 # urlpatterns = [

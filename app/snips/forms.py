@@ -1,9 +1,10 @@
+from dataclasses import field
 from django import forms
+from snips.models import Snipit
 
 
-class SnipitForm(forms.Form):
+class SnipitForm(forms.ModelForm):
+    class Meta:
+        model=Snipit
+        fields = ["language_name","snip_title","language_code","short_description"]
  
- language_name = forms.CharField(max_length=100)
- snip_title= forms.CharField(max_length=100)
- language_code= forms.CharField(max_length=3000)
-short_description= forms.CharField(max_length=100)

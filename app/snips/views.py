@@ -4,6 +4,7 @@ from django.http import HttpResponse
 from .models import Snipit
 from django.contrib import messages
 # from .forms import SnipitForm
+from snips.forms import SnipitForm
 
 # monkey= datetime.datetime.now()
 def index(request):
@@ -35,25 +36,11 @@ def add_snip(request):
                 })
 
 
-def edit(request,snip_id):
-#     form= UserForm(request.POST or None)
+def edit(request,id):
+ Selected_snip = Snipit.objects.get(id=id)
+ forms = SnipitForm(request.POST, instance=Selected_snip)
+ if forms.is_valid():
+        forms.save()
+ return render(request, "users/edit.html",{"navbar":"edit","viw_snip":Selected_snip}) 
 
-#     if form.is_valid():
-#         data= form.cleaned_data.get("form_field")
-
-        if request.method == "PUT": 
-                language_name =request.PUT["language_name"]
-                snip_title=request.PUT["snip_title"]
-                language_code= request.PUT["language_code"]
-                short_description= request.PUT["short_description"]
-                snipitt = Snipit(language_name=language_name,snip_title=snip_title,language_code=language_code,short_description=short_description)
-                snipitt.save()
-                messages.info(request, "successfully saved snipt")
-                return redirect("users/index.html")
-        else:
-
-                Selected_snip = Snipit.objects.get(id=snip_id)
-        return render( request, "users/edit.html",{"navbar":"edit","viw_snip":Selected_snip})             
-        
-        
-# "header": 'with c# ',
+      

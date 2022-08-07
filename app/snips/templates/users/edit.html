@@ -1,4 +1,5 @@
 {% extends 'users/layout.html' %} {% block content %} 
+{% load static %}
 <div class="row">
     <div class="col-sm-3">
    
@@ -11,22 +12,27 @@
 
           <div class="card mb-3">
             <div class="card-body">
-              {% csrf_token %}
-                <form class="row g-3" action=""  method="PUT">
+       
+                <form action="/edit/{{viw_snip.id}}/"  method="post"
+               >{% csrf_token %}
+               {{ form.as_p }}
                 <div class="col-12">
-                    <label for="inputAddress" class="form-label">Computer language</label>
-                    <input type="text" name="language_name" value="{{viw_snip.language_name}}" class="form-control" id="inputAddress" placeholder="your lan" required>
+                    <label for=""  class="form-label">Computer language</label>
+                    <input type="text" for="" name="language_name"  value="{{viw_snip.language_name}}"  placeholder="{{viw_snip.language_name}}" required>
                   </div>
                   <div class="col-12 mt-3">
-                    <label for="inputAddress2" class="form-label">Snip Title</label>
-                    <input type="text" name="snip_title" value="{{viw_snip.snip_title}}" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" required>
+                    <label for="inputAddress2"  for="" class="form-label">Snip Title</label>
+                    <input type="text" for="" name="snip_title"  value="{{viw_snip.snip_title}}" placeholder="{{viw_snip.snip_title}}" required>
                   </div>
                   <div class="card-body">
                     <textarea
+                    type="text"
+                    for=""
+                    name="language_code"
                       class="form-control"
                       id="exampleFormControlTextarea1"
-                      rows="16"
-                      name="language_code"
+                      rows="8"
+                   
                       required
                     >
                         {{viw_snip.language_code}}
@@ -35,16 +41,16 @@
                   </div>
 
                   <div class="col-12">
-                    <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-                  <textarea name="short_description" class="form-control" id="exampleFormControlTextarea1" rows="3" required>{{viw_snip.short_description}}</textarea>
+                    <label for="" class="form-label">Example textarea</label>
+                  <textarea  type="text" for="" name="short_description" class="form-control" id="exampleFormControlTextarea1" rows="3" required>{{viw_snip.short_description}}</textarea>
                   </div>
         
                   <div class="col-6 mt-3">
-                    <button type="submit" class="btn btn-primary">Update Snip</button>
+                    <button for="" type="submit" value="submit" name="Submit" class="btn btn-primary">Update Snip</button>
                    
                   </div>
                   <div class="col-6 mt-3">
-                    <button type="submit" class="btn btn-danger">Delete</button>
+                    <button type="submit" for=""value="submit" name="Submit" class="btn btn-danger">Delete</button>
                   </div>
                 </form>
               
