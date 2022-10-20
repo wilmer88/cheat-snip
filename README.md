@@ -1,12 +1,15 @@
 # cheat-snip
-* to activate existing enviorment `.\env\Scripts\activate `
+* to make a new django env `python -m virtualenv choiceofname`
+* for python to offically recognize your virtualenv run `python -m virtualenv --version`
+* to activate existing enviorment on command Promt run `.\env\Scripts\activate ` or git bash run ` source your_env/Scripts/activate`
+* to install django run `python -m pip install Django`
+* to create new django app with env initiated `django-admin startproject urNamechoice` after creating app cd inside directory.
+* after you cd inside the newly created app dir next run `python manage.py startapp YourAppName` will create a sibeling app 
+
 * to run python program enter inside app directory `python manage.py runserver`
-* to create new virtualenv go to folder where you want to create the envirment and run `python -m virtualenv YOURenvNAME`
-* next in the same dir run `source YOURenvNAME/Scripts/activate` or if in command prompt try `.\yourEnvName\Scripts\activate` to actually _use_ your sandbox, and "source" the virtualenv.
 * To exit your virtualenv sandbox and return to your normal system environmentuse `deactivate`
 * To install django run in the same dir you created virtualenv run `python -m pip install Django`
-* to start project run `django-admin startproject app` that will create your django app folder
-* cd inside the newly created app dir and run `python manage.py startapp users` will create user folder wirh alot other files
+
 * next go to your created app next go to setttings.py and add `users.apps.UsersConfig` inside the  INSTALLED_APPS =[] array.
  `INSTALLED_APPS =[ 
     'django.contrib.admin',
@@ -75,11 +78,6 @@ this will be like {{{ body }}} of main.handlebars file when using handlebars.js
 * inside of `python manage.py shell` create snip/user with a variable like this `userrr = User(first_name="will", email="@yahoo.com", etc)`
 * save user by runing ` userrr.save() `
 * `User.objects.all()` gets whole collection/table data
-
-
-
-
- 
 
 
 # python-notes
